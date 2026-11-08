@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+    <!-- NavBar Section -->
+    <header class="main-header" id="mainHeader">
+        <nav class="navSection" id="navSection">
+            <div class="webNameCn" id="webNameCn">
+                <h4 class="webName" id="webName">Code Cart</h4>
+            </div>
+
+            <div class="navLinksCn" id="navLinksCn">
+                <a href="#" class="navLinks" id="navLinksHome">Home</a>
+                <a href="#" class="navLinks" id="navLinksShop">Shop</a>
+                <a href="#" class="navLinks" id="navLinksAbout">About</a>
+                <a href="#" class="navLinks" id="navLinksContact">Contact</a>
+            </div>
+
+            <div class="optionsCn" id="optionsCn">
+                <i class="fa-solid fa-magnifying-glass searchIcn" id="searchIcn" role="button" tabindex="0"
+                    aria-label="Search"></i>
+                <i class="fa-regular fa-user userIcn" id="userIcn" role="button" tabindex="0"
+                    aria-label="User Account"></i>
+                <div class="cartCn" id="cartCn">
+                    <i class="fa-solid fa-cart-shopping cartIcn" id="cartIcn" role="button" tabindex="0"
+                        aria-label="Shopping Cart"></i>
+                    <span class="itmQuantity" id="itmQuantity">00,00</span>
+                </div>
+            </div>
+        </nav>
+
+        <hr>
+
+        <div class="shopNowCn" id="shopNowCn">
+            <h4 class="shopNowHeading" id="shopNowHeading">Find Your Next Favourite Product.</h4>
+            <p class="shopNowPara" id="shopNowPara">Quality Products. Simple Shopping Experience</p>
+            <button class="shopNowBtn" id="shopNowBtn">Shop Now</button>
+        </div>
+    </header>
+
+    <main id="mainContent">
+
+        <div class="productCn" id="productCn">
+            <h4 class="ftPr" id="ftPr">Featured Products</h4>
+
+            <div class="productMainCn" id="productMainCn">
+
+                <div class="productCard productCard1" id="productCard1">
+                    <img src="imgFld/eccomerceWebImg.jpg" alt="Ecommerce Website Template"
+                        class="productImg website1Img" id="productImg1">
+                    <span class="productName" id="productName1">Ecommerce Website</span>
+                    <span class="productRating" id="productRating1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="productPrice" id="productPrice1">Price : $50</span>
+                    <button class="orderBtn" id="orderBtn1">Order Now</button>
+                </div>
+
+                <div class="productCard productCard2" id="productCard2">
+                    <img src="imgFld/bussnieswebimg.jpg" alt="Business Website Template" class="productImg"
+                        id="productImg2">
+                    <span class="productName" id="productName2">Business Website</span>
+                    <span class="productRating" id="productRating2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="productPrice" id="productPrice2">Price : $80</span>
+                    <button class="orderBtn" id="orderBtn2">Order Now</button>
+                </div>
+
+                <div class="productCard productCard3" id="productCard3">
+                    <img src="imgFld/portfoliowebimg.jpg" alt="Portfolio Website Template" class="productImg"
+                        id="productImg3">
+                    <span class="productName" id="productName3">Portfolio Website</span>
+                    <span class="productRating" id="productRating3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="productPrice" id="productPrice3">Price : $60</span>
+                    <button class="orderBtn" id="orderBtn3">Order Now</button>
+                </div>
+
+                <div class="productCard productCard4" id="productCard4">
+                    <img src="imgFld/saasWebimg.jpg" alt="SaaS Website Template" class="productImg" id="productImg4">
+                    <span class="productName" id="productName4">SaaS Website</span>
+                    <span class="productRating" id="productRating4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="productPrice" id="productPrice4">Price : $100</span>
+                    <button class="orderBtn" id="orderBtn4">Order Now</button>
+                </div>
+            </div>
+
+            <div class="featuresCn" id="featuresCn">
+
+                <div class="featureCard featureCard1" id="featureCard1">
+                    <div class="featureIconCn" id="featureIconCn1">
+                        <i class="fa-solid fa-shield-halved featureIcon" id="featureIcon1"></i>
+                    </div>
+                    <h4 class="featureHeading" id="featureHeading1">Precision Craftsmanship</h4>
+                    <p class="featurePara" id="featurePara1">Every component undergoes rigorous stress testing and
+                        acoustic tuning to ensure flawless performance for intensive dev workloads.</p>
+                </div>
+
+                <div class="featureCard featureCard2" id="featureCard2">
+                    <div class="featureIconCn" id="featureIconCn2">
+                        <i class="fa-solid fa-truck featureIcon" id="featureIcon2"></i>
+                    </div>
+                    <h4 class="featureHeading" id="featureHeading2">Priority Global Logistics</h4>
+                    <p class="featurePara" id="featurePara2">Insured express dispatch worldwide with real-time
+                        end-to-end tracking and custom eco-friendly hardware packaging.</p>
+                </div>
+
+                <div class="featureCard featureCard3" id="featureCard3">
+                    <div class="featureIconCn" id="featureIconCn3">
+                        <i class="fa-solid fa-lock featureIcon" id="featureIcon3"></i>
+                    </div>
+                    <h4 class="featureHeading" id="featureHeading3">Encrypted Transact Protocol</h4>
+                    <p class="featurePara" id="featurePara3">256-bit SSL secure checkout supporting major crypto
+                        assets, Apple Pay, and standard credit cards with zero friction.</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="feedbackSectionCn" id="feedbackSectionCn">
+
+                <div class="feedbackHeaderCn" id="feedbackHeaderCn">
+                    <h4 class="feedbackSubHeading" id="feedbackSubHeading">Community Verified</h4>
+                    <h2 class="feedbackHeading" id="feedbackHeading">Engineer Feedback</h2>
+                    <p class="feedbackPara" id="feedbackPara">Read what senior developers and creators say about
+                        CodeCart products.</p>
+                </div>
+
+                <!-- Ratings Card 1 -->
+                <div class="ratingsCard ratingsCard1" id="ratingsCard1">
+                    <div class="ratingCardTop" id="ratingCardTop1">
+                        <span class="ratingName" id="ratingName1">Alex Chen</span>
+                        <span class="ratingRole" id="ratingRole1">Senior Full-Stack Developer</span>
+                    </div>
+                    <div class="ratingStars" id="ratingStars1" aria-label="5 out of 5 stars">
+                        <i class="fa-solid fa-star" id="ratingStar1a"></i>
+                        <i class="fa-solid fa-star" id="ratingStar1b"></i>
+                        <i class="fa-solid fa-star" id="ratingStar1c"></i>
+                        <i class="fa-solid fa-star" id="ratingStar1d"></i>
+                        <i class="fa-solid fa-star" id="ratingStar1e"></i>
+                    </div>
+                    <p class="ratingText" id="ratingText1">The e-commerce template saved me weeks of development. Clean
+                        code, well-structured, and easy to customize.</p>
+                </div>
+
+                <!-- Ratings Card 2 -->
+                <div class="ratingsCard ratingsCard2" id="ratingsCard2">
+                    <div class="ratingCardTop" id="ratingCardTop2">
+                        <span class="ratingName" id="ratingName2">Sarah Miller</span>
+                        <span class="ratingRole" id="ratingRole2">UI/UX Designer</span>
+                    </div>
+                    <div class="ratingStars" id="ratingStars2" aria-label="5 out of 5 stars">
+                        <i class="fa-solid fa-star" id="ratingStar2a"></i>
+                        <i class="fa-solid fa-star" id="ratingStar2b"></i>
+                        <i class="fa-solid fa-star" id="ratingStar2c"></i>
+                        <i class="fa-solid fa-star" id="ratingStar2d"></i>
+                        <i class="fa-solid fa-star" id="ratingStar2e"></i>
+                    </div>
+                    <p class="ratingText" id="ratingText2">Beautiful portfolio template with great attention to detail.
+                        The responsive design works flawlessly on all devices.</p>
+                </div>
+
+                <!-- Ratings Card 3 -->
+                <div class="ratingsCard ratingsCard3" id="ratingsCard3">
+                    <div class="ratingCardTop" id="ratingCardTop3">
+                        <span class="ratingName" id="ratingName3">David Kumar</span>
+                        <span class="ratingRole" id="ratingRole3">DevOps Engineer</span>
+                    </div>
+                    <div class="ratingStars" id="ratingStars3" aria-label="5 out of 5 stars">
+                        <i class="fa-solid fa-star" id="ratingStar3a"></i>
+                        <i class="fa-solid fa-star" id="ratingStar3b"></i>
+                        <i class="fa-solid fa-star" id="ratingStar3c"></i>
+                        <i class="fa-solid fa-star" id="ratingStar3d"></i>
+                        <i class="fa-solid fa-star" id="ratingStar3e"></i>
+                    </div>
+                    <p class="ratingText" id="ratingText3">The SaaS template is production-ready. Well-documented
+                        components and a solid architecture. Highly recommended.</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="newsletterCn" id="newsletterCn">
+
+                <i class="fa-solid fa-envelope newsletterIcon" id="newsletterIcon" aria-hidden="true"></i>
+
+                <h3 class="newsletterHeading" id="newsletterHeading">Join The CodeCart Collective</h3>
+                <p class="newsletterPara" id="newsletterPara">Subscribe for early drop access, private discount tokens,
+                    and hardware release logs. No spam, ever.</p>
+
+                <label for="newsletterInput" class="visually-hidden">Email Address</label>
+                <input type="email" class="newsletterInput" id="newsletterInput"
+                    placeholder="Enter Your Email Address">
+                <button class="newsletterBtn" id="newsletterBtn">Subscribe</button>
+
+            </div>
+
+        </div>
+        <!-- productCn closes here -->
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footerBottomCn" id="footerBottomCn">
+
+        <div class="copyrightCn" id="copyrightCn">
+            <span class="copyrightText" id="copyrightText">© 2026 CodeCart by Coding Fam. All rights reserved.</span>
+        </div>
+
+        <div class="footerLegalCn" id="footerLegalCn">
+            <a href="#" class="footerLegalLink" id="privacyPolicyLink">Privacy Policy</a>
+            <a href="#" class="footerLegalLink" id="termsOfServiceLink">Terms of Service</a>
+            <a href="#" class="footerLegalLink" id="cookiePreferencesLink">Cookie Preferences</a>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
