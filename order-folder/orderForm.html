@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Project - CodeCart</title>
+    <link rel="stylesheet" href="orderForm.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="order-container">
+        <header class="form-header">
+            <h1 class="brand-title">Code<span>Cart</span></h1>
+            <p class="subtitle">Select your website type and place your custom order</p>
+        </header>
+
+        <form action="#" method="POST" class="order-form" id="projectOrderForm">
+            
+            <!-- Section 1: Personal Details -->
+            <section class="form-section">
+                <h2 class="section-title"><i class="fa-solid fa-user"></i> Personal Information</h2>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="phone">Phone / WhatsApp Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Website Type Selection -->
+            <section class="form-section">
+                <h2 class="section-title"><i class="fa-solid fa-globe"></i> Select Website Type</h2>
+                <div class="services-grid">
+                    
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="50" data-name="E-Commerce Website" checked>
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <h3>E-Commerce Store</h3>
+                            <p class="desc">Online store with payment & product management</p>
+                            <div class="price">$50</div>
+                        </div>
+                    </label>
+
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="80" data-name="Business Website">
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <h3>Business Website</h3>
+                            <p class="desc">Professional corporate site for modern brands</p>
+                            <div class="price">$80</div>
+                        </div>
+                    </label>
+
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="60" data-name="Portfolio Website">
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-user-ninja"></i></div>
+                            <h3>Portfolio Website</h3>
+                            <p class="desc">Personal showcase for developers & creators</p>
+                            <div class="price">$60</div>
+                        </div>
+                    </label>
+
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="100" data-name="SaaS Application">
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+                            <h3>SaaS Application</h3>
+                            <p class="desc">Web app platform with user authentication</p>
+                            <div class="price">$100</div>
+                        </div>
+                    </label>
+
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="45" data-name="Landing Page">
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+                            <h3>Landing Page</h3>
+                            <p class="desc">High-converting single page for lead generation</p>
+                            <div class="price">$45</div>
+                        </div>
+                    </label>
+
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="70" data-name="Blog / News Portal">
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-newspaper"></i></div>
+                            <h3>Blog / News Portal</h3>
+                            <p class="desc">Content platform with categories & CMS setup</p>
+                            <div class="price">$70</div>
+                        </div>
+                    </label>
+
+                    <label class="service-card">
+                        <input type="radio" name="websiteType" value="120" data-name="Custom Web Application">
+                        <div class="card-content">
+                            <div class="icon"><i class="fa-solid fa-code"></i></div>
+                            <h3>Custom Web App</h3>
+                            <p class="desc">Bespoke dashboard, MERN app, or API system</p>
+                            <div class="price">$120</div>
+                        </div>
+                    </label>
+
+                </div>
+            </section>
+
+            <!-- Section 3: Project Requirements -->
+            <section class="form-section">
+                <h2 class="section-title"><i class="fa-solid fa-file-lines"></i> Project Details</h2>
+                <div class="input-group">
+                    <label for="projectDetails">Describe your requirements & feature list</label>
+                    <textarea id="projectDetails" name="projectDetails" rows="4" placeholder="Mention design references, required pages, color scheme, or target features..."></textarea>
+                </div>
+            </section>
+
+            <!-- Order Summary & Submit CTA -->
+            <div class="order-summary-box">
+                <div class="summary-details">
+                    <span>Total Investment:</span>
+                    <span class="total-price" id="totalPrice">$50</span>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-bolt"></i> Complete & Place Order Now
+                </button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="orderForm.js"></script>
+</body>
+</html>

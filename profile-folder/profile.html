@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Code Cart</title>
+    <!-- Apni profile.css file link karein -->
+    <link rel="stylesheet" href="profile.css">
+    
+    <!-- Google Fonts for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Container for Login -->
+    <div class="auth-container">
+        
+        <!-- Login Form Box -->
+        <div class="auth-box" id="login-box">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Login to your account</p>
+
+            <form action="#">
+                <div class="input-group">
+                    <label for="login-email">Email Address Or Number</label>
+                    <input type="email" id="login-email" placeholder="Login Email Or Number" >
+                </div>
+
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" >
+                </div>
+
+                <button type="submit" class="btn-primary" id="loginBtn">Login</button>
+            </form>
+
+            <p class="switch-text">
+                Don't have an account? 
+                <a href="#" id="show-signup">Create Account</a>
+            </p>
+        </div>
+
+
+    <script src="profile.js"></script>
+</body>
+</html>

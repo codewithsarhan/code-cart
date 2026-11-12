@@ -21,15 +21,19 @@
             </div>
 
             <div class="navLinksCn" id="navLinksCn">
-                <a href="#" class="navLinks" id="navLinksHome">Home</a>
-                <a href="#" class="navLinks" id="navLinksShop">Shop</a>
-                <a href="#" class="navLinks" id="navLinksAbout">About</a>
-                <a href="#" class="navLinks" id="navLinksContact">Contact</a>
+                <a href="#shopNowCn" class="navLinks" id="navLinksHome">Home</a>
+                <a href="#productCn" class="navLinks" id="navLinksShop">Shop</a>
+                <a href="#feedbackSectionCn" class="navLinks" id="navLinksAbout">About</a>
+                <a href="#footerBottomCn" class="navLinks" id="navLinksContact">Contact</a>
             </div>
 
             <div class="optionsCn" id="optionsCn">
-                <i class="fa-solid fa-magnifying-glass searchIcn" id="searchIcn" role="button" tabindex="0"
-                    aria-label="Search"></i>
+                <div class="srchCn" id="srchCn">
+                    <input type="search" class="searchInpt" id="searchInpt" placeholder="search products....">
+                    <i class="fa-solid fa-magnifying-glass searchIcn" id="searchIcn" role="button" tabindex="0"
+                        aria-label="Search"></i>
+                </div>
+
                 <i class="fa-regular fa-user userIcn" id="userIcn" role="button" tabindex="0"
                     aria-label="User Account"></i>
                 <div class="cartCn" id="cartCn">
@@ -39,15 +43,15 @@
                 </div>
             </div>
         </nav>
-
-        <hr>
-
-        <div class="shopNowCn" id="shopNowCn">
-            <h4 class="shopNowHeading" id="shopNowHeading">Find Your Next Favourite Product.</h4>
-            <p class="shopNowPara" id="shopNowPara">Quality Products. Simple Shopping Experience</p>
-            <button class="shopNowBtn" id="shopNowBtn">Shop Now</button>
-        </div>
     </header>
+
+    <hr>
+
+    <div class="shopNowCn" id="shopNowCn">
+        <h4 class="shopNowHeading" id="shopNowHeading">Find Your Next Favourite Product.</h4>
+        <p class="shopNowPara" id="shopNowPara">Quality Products. Simple Shopping Experience</p>
+       <a href="#productMainCn"><button class="shopNowBtn" id="shopNowBtn">Shop Now</button></a>
+    </div>
 
     <main id="mainContent">
 
@@ -222,8 +226,7 @@
                     and hardware release logs. No spam, ever.</p>
 
                 <label for="newsletterInput" class="visually-hidden">Email Address</label>
-                <input type="email" class="newsletterInput" id="newsletterInput"
-                    placeholder="Enter Your Email Address">
+                <input type="email" class="newsletterInput" id="newsletterInput" placeholder="Enter Your Email Address">
                 <button class="newsletterBtn" id="newsletterBtn">Subscribe</button>
 
             </div>

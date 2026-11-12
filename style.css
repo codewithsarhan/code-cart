@@ -67,8 +67,15 @@ a {
    HEADER / NAVBAR
    ========================================= */
 .main-header {
+     position: fixed;      /* ✅ yahan */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
 }
 
 .navSection {
@@ -79,6 +86,10 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    background-color:#FFFFFF ;
+    position: fixed;
+    width: 100%;
+
 }
 
 .webName {
@@ -472,6 +483,41 @@ main {
 
 .newsletterBtn:hover {
     background: var(--accent-hover);
+}
+
+.searchInpt{
+
+    width: 250px;
+    height: 15px;
+    padding: 2px;
+    border: #666666 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+
+}
+
+.srchCn{
+
+display: flex;
+align-items: center;
+gap: 10px;
+
+}
+
+.searchInpt[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; 
+  
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>') no-repeat center;
+  background-size: contain;
+  
+  
+  
+  
+  margin-right: 5px;
 }
 
 /* =========================================
