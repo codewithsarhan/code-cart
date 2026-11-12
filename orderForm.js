@@ -7,43 +7,62 @@ let servicesGrid = document.querySelector('.services-grid')
 let productPrice = document.querySelectorAll('.price');
 let totalPrice = document.querySelector('#totalPrice')
 
+let prPrice ;
+let prName ;
+let prDisc;
+
 servicesGrid.addEventListener('click', (e) => {
-
-
 
     if (e.target.closest('.card-content')) {
 
         let crd = e.target.closest('.card-content')
         console.log(crd);
-        let prPrice = crd.querySelector('.price');
-        let prdctPrice = prPrice.textContent;
+        prPrice = crd.querySelector('.price').textContent;
+        prName = crd.querySelector('h3').textContent;
+        prDisc = crd.querySelector('.desc').textContent;
+        console.log(prName);
+        console.log(prDisc);
         console.log(prPrice);
 
-        totalPrice.textContent = prdctPrice
-
-        let submitBtn = document.querySelector('.submit-btn');
-
-        submitBtn.addEventListener('click', (e) => {
-
-            e.preventDefault();
-
-            let userName = fullNameInput.value ; 
-            let userEmail = emailInput.value ;
-            let userPhoneNo = phoneInput.value ;
-
-            let orderDiv = document.createElement('div')
-            let user_Name = document.createElement('h1')
-            let 
-
-
-            
-
-        })
 
 
     }
-
-
-
 })
 
+
+
+
+let submitBtn = document.querySelector('.submit-btn');
+
+submitBtn.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
+    let userName = fullNameInput.value;
+    let userEmail = emailInput.value;
+    let userPhoneNo = phoneInput.value;
+
+    let productPrice = prPrice;
+    let productName = prName;
+    let productDisc = prDisc;
+
+    console.log(productPrice);
+    console.log(productName);
+    console.log(productDisc);
+
+
+    console.log(userName);
+    console.log(userEmail);
+    console.log(userPhoneNo);
+
+    localStorage.setItem("userName", userName);
+    localStorage.setItem("userEmail", userEmail);
+    localStorage.setItem("userPhoneNo", userPhoneNo);
+    localStorage.setItem("productPrice", productPrice);
+    localStorage.setItem("productName", productName);
+    localStorage.setItem("productDisc", productDisc);
+    localStorage.setItem('cartItem', true);
+
+    window.location.href = "index.html"
+
+})
