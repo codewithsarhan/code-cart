@@ -25,6 +25,9 @@ servicesGrid.addEventListener('click', (e) => {
         console.log(prPrice);
 
 
+        totalPrice.textContent = prPrice ;
+
+
 
     }
 })
