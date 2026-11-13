@@ -24,3 +24,11 @@ productdisc.textContent = productDisc;
 producttitle.textContent = productName;
 statusValue.textContent = "Pending"
 statusValue.style.color = "Orange"
+
+let btnremove = document.querySelector('.btn-remove');
+
+btnremove.addEventListener('click' , () => {
+
+localStorage.clear()
+
+})
