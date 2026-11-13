@@ -25,7 +25,7 @@ servicesGrid.addEventListener('click', (e) => {
         console.log(prPrice);
 
 
-        totalPrice.textContent = prPrice ;
+        totalPrice.textContent = prPrice;
 
 
 
@@ -49,22 +49,6 @@ submitBtn.addEventListener('click', (e) => {
     let productName = prName;
     let productDisc = prDisc;
 
-    console.log(productPrice);
-    console.log(productName);
-    console.log(productDisc);
-
-
-    console.log(userName);
-    console.log(userEmail);
-    console.log(userPhoneNo);
-
-    localStorage.setItem("userName", userName);
-    localStorage.setItem("userEmail", userEmail);
-    localStorage.setItem("userPhoneNo", userPhoneNo);
-    localStorage.setItem("productPrice", productPrice);
-    localStorage.setItem("productName", productName);
-    localStorage.setItem("productDisc", productDisc);
-    localStorage.setItem('cartItem', true);
 
     if (userName == '' && userEmail == '' && userPhoneNo == '') {
 
@@ -74,6 +58,14 @@ submitBtn.addEventListener('click', (e) => {
             text: "Filled Form First!",
         });
 
+
+    } else if (productDisc == undefined) {
+
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Select Website You Want To Buy",
+        });
 
     } else {
 
@@ -88,6 +80,15 @@ submitBtn.addEventListener('click', (e) => {
                 window.location.href = "index.html";
             }
         });
+
+
+        localStorage.setItem("userName", userName);
+        localStorage.setItem("userEmail", userEmail);
+        localStorage.setItem("userPhoneNo", userPhoneNo);
+        localStorage.setItem("productPrice", productPrice);
+        localStorage.setItem("productName", productName);
+        localStorage.setItem("productDisc", productDisc);
+        localStorage.setItem('cartItem', true);
 
 
     }

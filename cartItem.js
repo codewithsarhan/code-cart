@@ -13,22 +13,35 @@ let productdisc = document.querySelector('.product-disc');
 let productprice = document.querySelector('.product-price');
 let statusValue = document.querySelector('.status-value');
 
-console.log(productPrice);
-
 
 username.textContent = coustumerName;
-orderemail.textContent =userEmail;
+orderemail.textContent = userEmail;
 userphone.textContent = userPhoneNo;
 productprice.textContent = productPrice;
 productdisc.textContent = productDisc;
 producttitle.textContent = productName;
+
+console.log();
+
+
+if (productDisc == undefined) {
+    
+    statusValue.textContent = "buyfirst"
+    statusValue.style.color = "red"
+
+}else {
+
 statusValue.textContent = "Pending"
 statusValue.style.color = "Orange"
+
+}
+
 
 let btnremove = document.querySelector('.btn-remove');
 
 btnremove.addEventListener('click' , () => {
 
 localStorage.clear()
+location.reload()
 
 })
