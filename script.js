@@ -20,23 +20,43 @@ let cartIcn = document.querySelector('#cartIcn');
 
 cartIcn.addEventListener('click', () => {
 
-window.location.href = 'cartItem.html'
+    window.location.href = 'cartItem.html'
 
 })
 
 
 let productMainCn = document.querySelector('#productMainCn')
 
-productMainCn.addEventListener('click' , (e) => {
+productMainCn.addEventListener('click', (e) => {
 
 
-if (e.target.tagName === 'BUTTON') {
+    if (e.target.tagName === 'BUTTON') {
 
-    window.location.href = 'orderForm.html'
-    
-}
+        window.location.href = 'orderForm.html'
+
+    }
 
 
 })
 
 
+
+
+let cartItem = localStorage.getItem('cartItem');
+
+console.log(cartItem);
+
+
+let reddot = document.querySelector('.red-dot');
+
+reddot.style.display = 'none'
+
+function reddotFunc(cartValue) {
+
+    if (cartValue = true) {
+
+reddot.style.display = 'block'        
+
+    } 
+}
+reddotFunc(cartItem)

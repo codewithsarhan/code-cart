@@ -8,10 +8,48 @@
 </head>
 <body>
 
+    <main class="order-container">
+        <article class="product-card">
+            <header class="card-header">
+                <h3 class="order-title">Order By <span class="user-name"></span></h3>
+                <span class="badge">New Order</span>
+            </header>
 
+            <div class="card-body">
+                <div class="info-group">
+                    <span class="label">Email</span>
+                    <span class="value order-email">alikhan@example.com</span>
+                </div>
+                
+                <div class="info-group">
+                    <span class="label">Phone No</span>
+                    <span class="value user-phone">+92 300 1234567</span>
+                </div>
 
+                <div class="product-details">
+                    <h4 class="product-name"><span class="product-title-span">Wireless Mechanical Keyboard</span></h4>
+                    <p class="product-desc"><span class="product-disc">RGB backlit, tactile brown switches with Type-C detachable cable.</span></p>
+                </div>
+            </div>
 
-    
+            <footer class="card-footer">
+                <div class="price-box">
+                    <span class="price-label">Total Price</span>
+                    <span class="price-value product-price">Rs. 8,500</span>
+                </div>
+                <div class="status-box">
+                    <span class="status-label">Status :</span>
+                    <span class="status-value"></span>
+                </div>
+            </footer>
+        </article>
+
+        <div class="card-actions">
+            <button type="button" class="btn btn-add">Add</button>
+            <button type="button" class="btn btn-remove">Remove</button>
+        </div>
+    </main>
+
     <script src="cartItem.js"></script>
 </body>
 </html>

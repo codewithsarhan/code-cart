@@ -39,6 +39,7 @@
                 <div class="cartCn" id="cartCn">
                     <i class="fa-solid fa-cart-shopping cartIcn" id="cartIcn" role="button" tabindex="0"
                         aria-label="Shopping Cart"></i>
+                        <span class="red-dot showingRedDot removingRedDot"></span>
                     <span class="itmQuantity" id="itmQuantity">00,00</span>
                 </div>
             </div>
@@ -215,21 +216,6 @@
 
             </div>
 
-            <hr>
-
-            <div class="newsletterCn" id="newsletterCn">
-
-                <i class="fa-solid fa-envelope newsletterIcon" id="newsletterIcon" aria-hidden="true"></i>
-
-                <h3 class="newsletterHeading" id="newsletterHeading">Join The CodeCart Collective</h3>
-                <p class="newsletterPara" id="newsletterPara">Subscribe for early drop access, private discount tokens,
-                    and hardware release logs. No spam, ever.</p>
-
-                <label for="newsletterInput" class="visually-hidden">Email Address</label>
-                <input type="email" class="newsletterInput" id="newsletterInput" placeholder="Enter Your Email Address">
-                <button class="newsletterBtn" id="newsletterBtn">Subscribe</button>
-
-            </div>
 
         </div>
         <!-- productCn closes here -->
@@ -250,6 +236,8 @@
         </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="script.js"></script>
 </body>

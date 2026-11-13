@@ -7,8 +7,8 @@ let servicesGrid = document.querySelector('.services-grid')
 let productPrice = document.querySelectorAll('.price');
 let totalPrice = document.querySelector('#totalPrice')
 
-let prPrice ;
-let prName ;
+let prPrice;
+let prName;
 let prDisc;
 
 servicesGrid.addEventListener('click', (e) => {
@@ -63,6 +63,32 @@ submitBtn.addEventListener('click', (e) => {
     localStorage.setItem("productDisc", productDisc);
     localStorage.setItem('cartItem', true);
 
-    window.location.href = "index.html"
+    if (userName == '' && userEmail == '' && userPhoneNo == '') {
+
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Filled Form First!",
+        });
+
+
+    } else {
+
+
+        Swal.fire({
+            icon: "success",
+            title: "Good Job!",
+            text: "Your Order Save Sucessfully!",
+            confirmButtonText: "Confirm"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "index.html";
+            }
+        });
+
+
+    }
+
+
 
 })
