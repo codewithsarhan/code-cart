@@ -49,12 +49,12 @@ console.log(cartItem);
 
 let reddot = document.querySelector('.red-dot');
 
+reddot.style.display = 'none'
 
 function reddotFunc(cartValue) {
 
-    if (cartValue = true) {
+    if (cartValue === "true") {
 
-        reddot.style.removeProperty('display')
 reddot.style.display = 'block'        
 
     } 
