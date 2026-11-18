@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - CodeCart</title>
+    <link rel="stylesheet" href="accountCreate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Container for Signup -->
+    <div class="auth-container" id="authContainer">
+        
+        <!-- Signup Form Box -->
+        <div class="auth-box" id="signup-box">
+            <h2 id="signupTitle">Create Account</h2>
+            <p class="subtitle" id="signupSubtitle">Sign up to get started with CodeCart</p>
+
+            <form action="#" id="signupForm">
+                
+                <div class="input-group" id="inputGroupName">
+                    <label for="signup-name" id="labelSignupName">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group" id="inputGroupEmail">
+                    <label for="signup-email" id="labelSignupEmail">Email Address Or Number</label>
+                    <input type="text" id="signup-email" placeholder="Enter email or phone number" required>
+                </div>
+
+                <div class="input-group" id="inputGroupPassword">
+                    <label for="signup-password" id="labelSignupPassword">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a strong password" required>
+                </div>
+
+                <div class="input-group" id="inputGroupConfirmPassword">
+                    <label for="signup-confirm-password" id="labelSignupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="btn-primary" id="signupBtn">Sign Up</button>
+            </form>
+
+            <p class="switch-text" id="switchText">
+                Already have an account? 
+                <a href="#" id="show-login">Login</a>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="accountCreate.js"></script>
+</body>
+</html>

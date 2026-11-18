@@ -23,3 +23,11 @@ loginBtn.addEventListener('click', (e) => {
 
 
 })
+
+let showSignup = document.querySelector('#show-signup');
+
+showSignup.addEventListener('click' , () => {
+
+window.location.href = "accountCreate.html"
+
+})

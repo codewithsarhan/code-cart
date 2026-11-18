@@ -45,3 +45,11 @@ localStorage.clear()
 location.reload()
 
 })
+
+let btnAdd = document.querySelector('.btn-add');
+
+btnAdd.addEventListener('click' , () => {
+
+window.location.href = 'orderForm.html'
+
+})
