@@ -4,104 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Project - CodeCart</title>
+    <!-- Tailwind build output (same as before) -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Original custom stylesheet kept (your CSS unchanged & still used) -->
     <link rel="stylesheet" href="orderForm.css">
 </head>
-<body>
+<body class="bg-[#f8f9fa] text-[#1a1a1a] flex justify-center items-center min-h-screen py-10 px-5 font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] antialiased">
 
-    <main class="order-container" id="orderContainer">
-        <header class="form-header" id="formHeader">
-            <h1 class="brand-title" id="brandTitle">Code<span>Cart</span></h1>
-            <p class="subtitle" id="subtitle">Select your website type and place your custom order</p>
+    <main class="order-container w-full max-w-[900px] bg-white border border-[#e2e5e9] rounded-lg p-10"
+        id="orderContainer">
+        <header class="form-header text-center mb-[35px] border-b border-[#e2e5e9] pb-[25px]" id="formHeader">
+            <h1 class="brand-title text-[2.2rem] text-[#1a1a1a] tracking-[-0.5px]" id="brandTitle">Code<span
+                    class="text-[#555555]">Cart</span></h1>
+            <p class="subtitle text-[#555555] text-[0.95rem] mt-[6px]" id="subtitle">Select your website type and place
+                your custom order</p>
         </header>
 
         <form class="order-form" id="projectOrderForm">
-            
+
             <!-- Section 1: Personal Details -->
-            <section class="form-section" id="formSectionPersonal">
-                <h2 class="section-title" id="sectionTitlePersonal">Personal Information</h2>
-                <div class="input-grid" id="inputGrid">
-                    <div class="input-group" id="inputGroupFullName">
-                        <label for="fullName" id="labelFullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required>
+            <section class="form-section mb-[35px]" id="formSectionPersonal">
+                <h2 class="section-title text-[1.15rem] text-[#1a1a1a] mb-[18px]" id="sectionTitlePersonal">Personal
+                    Information</h2>
+                <div class="input-grid grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5" id="inputGrid">
+                    <div class="input-group flex flex-col gap-2" id="inputGroupFullName">
+                        <label for="fullName" class="text-[0.88rem] text-[#1a1a1a] font-medium"
+                            id="labelFullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required
+                            class="w-full bg-[#f8f9fa] border border-[#e2e5e9] text-[#1a1a1a] px-4 py-3 rounded-md text-[0.95rem] outline-none font-[inherit] focus:border-[#1a1a1a]">
                     </div>
 
-                    <div class="input-group" id="inputGroupEmail">
-                        <label for="email" id="labelEmail">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+                    <div class="input-group flex flex-col gap-2" id="inputGroupEmail">
+                        <label for="email" class="text-[0.88rem] text-[#1a1a1a] font-medium" id="labelEmail">Email
+                            Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required
+                            class="w-full bg-[#f8f9fa] border border-[#e2e5e9] text-[#1a1a1a] px-4 py-3 rounded-md text-[0.95rem] outline-none font-[inherit] focus:border-[#1a1a1a]">
                     </div>
 
-                    <div class="input-group full-width" id="inputGroupPhone">
-                        <label for="phone" id="labelPhone">Phone / WhatsApp Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required>
+                    <div class="input-group full-width flex flex-col gap-2 col-span-full" id="inputGroupPhone">
+                        <label for="phone" class="text-[0.88rem] text-[#1a1a1a] font-medium" id="labelPhone">Phone /
+                            WhatsApp Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required
+                            class="w-full bg-[#f8f9fa] border border-[#e2e5e9] text-[#1a1a1a] px-4 py-3 rounded-md text-[0.95rem] outline-none font-[inherit] focus:border-[#1a1a1a]">
                     </div>
                 </div>
             </section>
 
             <!-- Section 2: Website Type Selection -->
-            <section class="form-section" id="formSectionServices">
-                <h2 class="section-title" id="sectionTitleServices">Select Website Type</h2>
-                <div class="services-grid" id="servicesGrid">
-                    
-                    <label class="service-card" id="serviceCard1">
-                        <input type="radio" name="websiteType" value="50" data-name="E-Commerce Website">
-                        <div class="card-content" id="cardContent1">
-                            <h3 id="serviceTitle1">E-Commerce Store</h3>
-                            <p class="desc" id="serviceDesc1">Online store with payment & product management</p>
-                            <div class="price" id="servicePrice1">$50</div>
+            <section class="form-section mb-[35px]" id="formSectionServices">
+                <h2 class="section-title text-[1.15rem] text-[#1a1a1a] mb-[18px]" id="sectionTitleServices">Select
+                    Website Type</h2>
+                <div class="services-grid grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4" id="servicesGrid">
+
+                    <label class="service-card relative cursor-pointer" id="serviceCard1">
+                        <input type="radio" name="websiteType" value="50" data-name="E-Commerce Website"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent1">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle1">E-Commerce Store</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc1">
+                                Online store with payment & product management</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice1">$50</div>
                         </div>
                     </label>
 
-                    <label class="service-card" id="serviceCard2">
-                        <input type="radio" name="websiteType" value="80" data-name="Business Website">
-                        <div class="card-content" id="cardContent2">
-                            <h3 id="serviceTitle2">Business Website</h3>
-                            <p class="desc" id="serviceDesc2">Professional corporate site for modern brands</p>
-                            <div class="price" id="servicePrice2">$80</div>
+                    <label class="service-card relative cursor-pointer" id="serviceCard2">
+                        <input type="radio" name="websiteType" value="80" data-name="Business Website"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent2">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle2">Business Website</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc2">
+                                Professional corporate site for modern brands</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice2">$80</div>
                         </div>
                     </label>
 
-                    <label class="service-card" id="serviceCard3">
-                        <input type="radio" name="websiteType" value="60" data-name="Portfolio Website">
-                        <div class="card-content" id="cardContent3">
-                            <h3 id="serviceTitle3">Portfolio Website</h3>
-                            <p class="desc" id="serviceDesc3">Personal showcase for developers & creators</p>
-                            <div class="price" id="servicePrice3">$60</div>
+                    <label class="service-card relative cursor-pointer" id="serviceCard3">
+                        <input type="radio" name="websiteType" value="60" data-name="Portfolio Website"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent3">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle3">Portfolio Website</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc3">
+                                Personal showcase for developers & creators</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice3">$60</div>
                         </div>
                     </label>
 
-                    <label class="service-card" id="serviceCard4">
-                        <input type="radio" name="websiteType" value="100" data-name="SaaS Application">
-                        <div class="card-content" id="cardContent4">
-                            <h3 id="serviceTitle4">SaaS Application</h3>
-                            <p class="desc" id="serviceDesc4">Web app platform with user authentication</p>
-                            <div class="price" id="servicePrice4">$100</div>
+                    <label class="service-card relative cursor-pointer" id="serviceCard4">
+                        <input type="radio" name="websiteType" value="100" data-name="SaaS Application"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent4">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle4">SaaS Application</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc4">Web
+                                app platform with user authentication</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice4">$100</div>
                         </div>
                     </label>
 
-                    <label class="service-card" id="serviceCard5">
-                        <input type="radio" name="websiteType" value="45" data-name="Landing Page">
-                        <div class="card-content" id="cardContent5">
-                            <h3 id="serviceTitle5">Landing Page</h3>
-                            <p class="desc" id="serviceDesc5">High-converting single page for lead generation</p>
-                            <div class="price" id="servicePrice5">$45</div>
+                    <label class="service-card relative cursor-pointer" id="serviceCard5">
+                        <input type="radio" name="websiteType" value="45" data-name="Landing Page"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent5">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle5">Landing Page</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc5">
+                                High-converting single page for lead generation</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice5">$45</div>
                         </div>
                     </label>
 
-                    <label class="service-card" id="serviceCard6">
-                        <input type="radio" name="websiteType" value="70" data-name="Blog / News Portal">
-                        <div class="card-content" id="cardContent6">
-                            <h3 id="serviceTitle6">Blog / News Portal</h3>
-                            <p class="desc" id="serviceDesc6">Content platform with categories & CMS setup</p>
-                            <div class="price" id="servicePrice6">$70</div>
+                    <label class="service-card relative cursor-pointer" id="serviceCard6">
+                        <input type="radio" name="websiteType" value="70" data-name="Blog / News Portal"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent6">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle6">Blog / News Portal</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc6">
+                                Content platform with categories & CMS setup</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice6">$70</div>
                         </div>
                     </label>
 
-                    <label class="service-card" id="serviceCard7">
-                        <input type="radio" name="websiteType" value="120" data-name="Custom Web Application">
-                        <div class="card-content" id="cardContent7">
-                            <h3 id="serviceTitle7">Custom Web App</h3>
-                            <p class="desc" id="serviceDesc7">Bespoke dashboard, MERN app, or API system</p>
-                            <div class="price" id="servicePrice7">$120</div>
+                    <label class="service-card relative cursor-pointer" id="serviceCard7">
+                        <input type="radio" name="websiteType" value="120" data-name="Custom Web Application"
+                            class="absolute opacity-0 pointer-events-none">
+                        <div class="card-content bg-[#f8f9fa] border border-[#e2e5e9] rounded-lg p-5 h-full flex flex-col justify-between hover:border-[#b0b5bc] [.service-card_input:checked+&]:border-[#1a1a1a] [.service-card_input:checked+&]:bg-white"
+                            id="cardContent7">
+                            <h3 class="text-[1.05rem] text-[#1a1a1a] mb-[6px]" id="serviceTitle7">Custom Web App</h3>
+                            <p class="desc text-[0.8rem] text-[#555555] leading-[1.4] mb-[15px]" id="serviceDesc7">
+                                Bespoke dashboard, MERN app, or API system</p>
+                            <div class="price text-[1.2rem] font-bold text-[#1a1a1a]" id="servicePrice7">$120</div>
                         </div>
                     </label>
 
@@ -109,12 +144,15 @@
             </section>
 
             <!-- Order Summary & Submit CTA -->
-            <div class="order-summary-box" id="orderSummaryBox">
-                <div class="summary-details" id="summaryDetails">
+            <div class="order-summary-box flex justify-between items-center bg-[#f8f9fa] border border-[#e2e5e9] px-[25px] py-5 rounded-lg mt-[10px] flex-wrap gap-5"
+                id="orderSummaryBox">
+                <div class="summary-details flex items-center gap-3 text-[1.1rem] text-[#555555]" id="summaryDetails">
                     <span id="summaryText">Total Investment:</span>
-                    <span class="total-price" id="totalPrice">$50</span>
+                    <span class="total-price text-[1.8rem] font-bold text-[#1a1a1a]" id="totalPrice">$50</span>
                 </div>
-                <button type="submit" class="submit-btn" id="submitBtn">
+                <button type="submit"
+                    class="submit-btn bg-[#1a1a1a] text-white border-none px-7 py-[14px] text-base font-medium rounded-md cursor-pointer hover:bg-black"
+                    id="submitBtn">
                     Complete & Place Order Now
                 </button>
             </div>

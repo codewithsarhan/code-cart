@@ -5,42 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Cart</title>
+    <!-- Tailwind (kept as build output, same as before) -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Original custom stylesheet kept (your CSS is unchanged & still used) -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
-<body>
+<body class="font-sans text-[#1a1a1a] bg-[#f8f9fa] leading-relaxed antialiased">
 
     <!-- NavBar Section -->
-    <header class="main-header" id="mainHeader">
-        <nav class="navSection" id="navSection">
+    <header class="main-header fixed top-0 left-0 right-0 z-[1000] bg-white border-b border-[#e2e5e9] flex justify-center"
+        id="mainHeader">
+        <nav class="navSection max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between gap-8 bg-white fixed w-full"
+            id="navSection">
             <div class="webNameCn" id="webNameCn">
-                <h4 class="webName" id="webName">Code Cart</h4>
+                <h4 class="webName text-[1.4rem] font-bold text-[#1a1a1a] tracking-[-0.3px]" id="webName">Code Cart</h4>
             </div>
 
-            <div class="navLinksCn" id="navLinksCn">
-                <a href="#shopNowCn" class="navLinks" id="navLinksHome">Home</a>
-                <a href="#productCn" class="navLinks" id="navLinksShop">Shop</a>
-                <a href="#feedbackSectionCn" class="navLinks" id="navLinksAbout">About</a>
-                <a href="#footerBottomCn" class="navLinks" id="navLinksContact">Contact</a>
+            <div class="navLinksCn flex gap-8" id="navLinksCn">
+                <a href="#shopNowCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
+                    id="navLinksHome">Home</a>
+                <a href="#productCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
+                    id="navLinksShop">Shop</a>
+                <a href="#feedbackSectionCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
+                    id="navLinksAbout">About</a>
+                <a href="#footerBottomCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
+                    id="navLinksContact">Contact</a>
             </div>
 
-            <div class="optionsCn" id="optionsCn">
-                <div class="srchCn" id="srchCn">
-                    <input type="search" class="searchInpt" id="searchInpt" placeholder="search products....">
-                    <i class="fa-solid fa-magnifying-glass searchIcn" id="searchIcn" role="button" tabindex="0"
-                        aria-label="Search"></i>
+            <div class="optionsCn flex items-center gap-6" id="optionsCn">
+                <div class="srchCn flex items-center gap-[10px]" id="srchCn">
+                    <input type="search" class="searchInpt w-[250px] h-[15px] border border-[#e2e5e9] bg-[#f8f9fa] text-[#1a1a1a] rounded-[5px] p-[15px] focus:outline-none focus:border-[#1a1a1a]"
+                        id="searchInpt" placeholder="search products....">
+                    <i class="fa-solid fa-magnifying-glass searchIcn text-[1.1rem] text-[#1a1a1a] cursor-pointer hover:text-[#555555]"
+                        id="searchIcn" role="button" tabindex="0" aria-label="Search"></i>
                 </div>
 
-                <i class="fa-regular fa-user userIcn" id="userIcn" role="button" tabindex="0"
-                    aria-label="User Account"></i>
-                <div class="cartCn" id="cartCn">
-                    <i class="fa-solid fa-cart-shopping cartIcn" id="cartIcn" role="button" tabindex="0"
-                        aria-label="Shopping Cart"></i>
-                        <span class="red-dot showingRedDot removingRedDot"></span>
-                    <span class="itmQuantity" id="itmQuantity">00,00</span>
+                <i class="fa-regular fa-user userIcn text-[1.1rem] text-[#1a1a1a] cursor-pointer hover:text-[#555555]"
+                    id="userIcn" role="button" tabindex="0" aria-label="User Account"></i>
+                <div class="cartCn flex items-center gap-[0.4rem]" id="cartCn">
+                    <i class="fa-solid fa-cart-shopping cartIcn text-[1.1rem] text-[#1a1a1a] cursor-pointer hover:text-[#555555]"
+                        id="cartIcn" role="button" tabindex="0" aria-label="Shopping Cart"></i>
+                    <span class="red-dot showingRedDot removingRedDot"></span>
+                    <span class="itmQuantity text-[0.8rem] text-[#555555] font-medium" id="itmQuantity">00,00</span>
                 </div>
             </div>
         </nav>
@@ -48,170 +58,223 @@
 
     <hr>
 
-    <div class="shopNowCn" id="shopNowCn">
-        <h4 class="shopNowHeading" id="shopNowHeading">Find Your Next Favourite Product.</h4>
-        <p class="shopNowPara" id="shopNowPara">Quality Products. Simple Shopping Experience</p>
-       <a href="#productMainCn"><button class="shopNowBtn" id="shopNowBtn">Shop Now</button></a>
+    <div class="shopNowCn max-w-[1200px] mx-auto px-8 pt-28 pb-20 text-center" id="shopNowCn">
+        <h4 class="shopNowHeading text-[2.2rem] font-bold leading-[1.3] text-[#1a1a1a] mb-4 tracking-[-0.5px]"
+            id="shopNowHeading">Find Your Next Favourite Product.</h4>
+        <p class="shopNowPara text-[1.05rem] text-[#555555] mb-8" id="shopNowPara">Quality Products. Simple Shopping
+            Experience</p>
+        <a href="#productMainCn"><button
+                class="shopNowBtn bg-[#1a1a1a] text-white text-[0.95rem] font-medium px-8 py-3 rounded-md hover:bg-black"
+                id="shopNowBtn">Shop Now</button></a>
     </div>
 
-    <main id="mainContent">
+    <main class="bg-[#f8f9fa]" id="mainContent">
 
-        <div class="productCn" id="productCn">
-            <h4 class="ftPr" id="ftPr">Featured Products</h4>
+        <div class="productCn max-w-[1200px] mx-auto px-8 py-16" id="productCn">
+            <h4 class="ftPr text-[1.8rem] font-bold text-[#1a1a1a] text-center mb-10" id="ftPr">Featured Products</h4>
 
-            <div class="productMainCn" id="productMainCn">
+            <div class="productMainCn grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6 mb-16"
+                id="productMainCn">
 
-                <div class="productCard productCard1" id="productCard1">
+                <div class="productCard bg-white border border-[#e2e5e9] rounded-lg p-4 flex flex-col gap-2 hover:border-[#b0b5bc] productCard1"
+                    id="productCard1">
                     <img src="imgFld/eccomerceWebImg.jpg" alt="Ecommerce Website Template"
-                        class="productImg website1Img" id="productImg1">
-                    <span class="productName" id="productName1">Ecommerce Website</span>
-                    <span class="productRating" id="productRating1">
+                        class="productImg w-full h-[180px] object-cover rounded bg-[#f1f3f5] website1Img" id="productImg1">
+                    <span class="productName text-base font-semibold text-[#1a1a1a] mt-[0.3rem]"
+                        id="productName1">Ecommerce Website</span>
+                    <span class="productRating flex gap-[0.2rem] text-[#f5a623] text-[0.8rem]" id="productRating1">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
-                    <span class="productPrice" id="productPrice1">Price : $50</span>
-                    <button class="orderBtn" id="orderBtn1">Order Now</button>
+                    <span class="productPrice text-base font-semibold text-[#1a1a1a]" id="productPrice1">Price :
+                        $50</span>
+                    <button
+                        class="orderBtn mt-2 px-4 py-[0.65rem] bg-[#1a1a1a] text-white text-[0.9rem] font-medium rounded hover:bg-black"
+                        id="orderBtn1">Order Now</button>
                 </div>
 
-                <div class="productCard productCard2" id="productCard2">
-                    <img src="imgFld/bussnieswebimg.jpg" alt="Business Website Template" class="productImg"
-                        id="productImg2">
-                    <span class="productName" id="productName2">Business Website</span>
-                    <span class="productRating" id="productRating2">
+                <div class="productCard bg-white border border-[#e2e5e9] rounded-lg p-4 flex flex-col gap-2 hover:border-[#b0b5bc] productCard2"
+                    id="productCard2">
+                    <img src="imgFld/bussnieswebimg.jpg" alt="Business Website Template"
+                        class="productImg w-full h-[180px] object-cover rounded bg-[#f1f3f5]" id="productImg2">
+                    <span class="productName text-base font-semibold text-[#1a1a1a] mt-[0.3rem]"
+                        id="productName2">Business Website</span>
+                    <span class="productRating flex gap-[0.2rem] text-[#f5a623] text-[0.8rem]" id="productRating2">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
-                    <span class="productPrice" id="productPrice2">Price : $80</span>
-                    <button class="orderBtn" id="orderBtn2">Order Now</button>
+                    <span class="productPrice text-base font-semibold text-[#1a1a1a]" id="productPrice2">Price :
+                        $80</span>
+                    <button
+                        class="orderBtn mt-2 px-4 py-[0.65rem] bg-[#1a1a1a] text-white text-[0.9rem] font-medium rounded hover:bg-black"
+                        id="orderBtn2">Order Now</button>
                 </div>
 
-                <div class="productCard productCard3" id="productCard3">
-                    <img src="imgFld/portfoliowebimg.jpg" alt="Portfolio Website Template" class="productImg"
-                        id="productImg3">
-                    <span class="productName" id="productName3">Portfolio Website</span>
-                    <span class="productRating" id="productRating3">
+                <div class="productCard bg-white border border-[#e2e5e9] rounded-lg p-4 flex flex-col gap-2 hover:border-[#b0b5bc] productCard3"
+                    id="productCard3">
+                    <img src="imgFld/portfoliowebimg.jpg" alt="Portfolio Website Template"
+                        class="productImg w-full h-[180px] object-cover rounded bg-[#f1f3f5]" id="productImg3">
+                    <span class="productName text-base font-semibold text-[#1a1a1a] mt-[0.3rem]"
+                        id="productName3">Portfolio Website</span>
+                    <span class="productRating flex gap-[0.2rem] text-[#f5a623] text-[0.8rem]" id="productRating3">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
-                    <span class="productPrice" id="productPrice3">Price : $60</span>
-                    <button class="orderBtn" id="orderBtn3">Order Now</button>
+                    <span class="productPrice text-base font-semibold text-[#1a1a1a]" id="productPrice3">Price :
+                        $60</span>
+                    <button
+                        class="orderBtn mt-2 px-4 py-[0.65rem] bg-[#1a1a1a] text-white text-[0.9rem] font-medium rounded hover:bg-black"
+                        id="orderBtn3">Order Now</button>
                 </div>
 
-                <div class="productCard productCard4" id="productCard4">
-                    <img src="imgFld/saasWebimg.jpg" alt="SaaS Website Template" class="productImg" id="productImg4">
-                    <span class="productName" id="productName4">SaaS Website</span>
-                    <span class="productRating" id="productRating4">
+                <div class="productCard bg-white border border-[#e2e5e9] rounded-lg p-4 flex flex-col gap-2 hover:border-[#b0b5bc] productCard4"
+                    id="productCard4">
+                    <img src="imgFld/saasWebimg.jpg" alt="SaaS Website Template"
+                        class="productImg w-full h-[180px] object-cover rounded bg-[#f1f3f5]" id="productImg4">
+                    <span class="productName text-base font-semibold text-[#1a1a1a] mt-[0.3rem]"
+                        id="productName4">SaaS Website</span>
+                    <span class="productRating flex gap-[0.2rem] text-[#f5a623] text-[0.8rem]" id="productRating4">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
-                    <span class="productPrice" id="productPrice4">Price : $100</span>
-                    <button class="orderBtn" id="orderBtn4">Order Now</button>
+                    <span class="productPrice text-base font-semibold text-[#1a1a1a]" id="productPrice4">Price :
+                        $100</span>
+                    <button
+                        class="orderBtn mt-2 px-4 py-[0.65rem] bg-[#1a1a1a] text-white text-[0.9rem] font-medium rounded hover:bg-black"
+                        id="orderBtn4">Order Now</button>
                 </div>
             </div>
 
-            <div class="featuresCn" id="featuresCn">
+            <div class="featuresCn grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6 mb-16" id="featuresCn">
 
-                <div class="featureCard featureCard1" id="featureCard1">
-                    <div class="featureIconCn" id="featureIconCn1">
-                        <i class="fa-solid fa-shield-halved featureIcon" id="featureIcon1"></i>
+                <div class="featureCard bg-white border border-[#e2e5e9] rounded-lg p-6 text-center featureCard1"
+                    id="featureCard1">
+                    <div class="featureIconCn w-[50px] h-[50px] mx-auto mb-4 flex items-center justify-center bg-[#f1f3f5] rounded-full"
+                        id="featureIconCn1">
+                        <i class="fa-solid fa-shield-halved featureIcon text-[1.3rem] text-[#1a1a1a]"
+                            id="featureIcon1"></i>
                     </div>
-                    <h4 class="featureHeading" id="featureHeading1">Precision Craftsmanship</h4>
-                    <p class="featurePara" id="featurePara1">Every component undergoes rigorous stress testing and
-                        acoustic tuning to ensure flawless performance for intensive dev workloads.</p>
+                    <h4 class="featureHeading text-base font-semibold text-[#1a1a1a] mb-2" id="featureHeading1">Precision
+                        Craftsmanship</h4>
+                    <p class="featurePara text-[0.9rem] text-[#555555] leading-relaxed" id="featurePara1">Every
+                        component undergoes rigorous stress testing and acoustic tuning to ensure flawless performance
+                        for intensive dev workloads.</p>
                 </div>
 
-                <div class="featureCard featureCard2" id="featureCard2">
-                    <div class="featureIconCn" id="featureIconCn2">
-                        <i class="fa-solid fa-truck featureIcon" id="featureIcon2"></i>
+                <div class="featureCard bg-white border border-[#e2e5e9] rounded-lg p-6 text-center featureCard2"
+                    id="featureCard2">
+                    <div class="featureIconCn w-[50px] h-[50px] mx-auto mb-4 flex items-center justify-center bg-[#f1f3f5] rounded-full"
+                        id="featureIconCn2">
+                        <i class="fa-solid fa-truck featureIcon text-[1.3rem] text-[#1a1a1a]" id="featureIcon2"></i>
                     </div>
-                    <h4 class="featureHeading" id="featureHeading2">Priority Global Logistics</h4>
-                    <p class="featurePara" id="featurePara2">Insured express dispatch worldwide with real-time
-                        end-to-end tracking and custom eco-friendly hardware packaging.</p>
+                    <h4 class="featureHeading text-base font-semibold text-[#1a1a1a] mb-2" id="featureHeading2">Priority
+                        Global Logistics</h4>
+                    <p class="featurePara text-[0.9rem] text-[#555555] leading-relaxed" id="featurePara2">Insured express
+                        dispatch worldwide with real-time end-to-end tracking and custom eco-friendly hardware
+                        packaging.</p>
                 </div>
 
-                <div class="featureCard featureCard3" id="featureCard3">
-                    <div class="featureIconCn" id="featureIconCn3">
-                        <i class="fa-solid fa-lock featureIcon" id="featureIcon3"></i>
+                <div class="featureCard bg-white border border-[#e2e5e9] rounded-lg p-6 text-center featureCard3"
+                    id="featureCard3">
+                    <div class="featureIconCn w-[50px] h-[50px] mx-auto mb-4 flex items-center justify-center bg-[#f1f3f5] rounded-full"
+                        id="featureIconCn3">
+                        <i class="fa-solid fa-lock featureIcon text-[1.3rem] text-[#1a1a1a]" id="featureIcon3"></i>
                     </div>
-                    <h4 class="featureHeading" id="featureHeading3">Encrypted Transact Protocol</h4>
-                    <p class="featurePara" id="featurePara3">256-bit SSL secure checkout supporting major crypto
-                        assets, Apple Pay, and standard credit cards with zero friction.</p>
+                    <h4 class="featureHeading text-base font-semibold text-[#1a1a1a] mb-2" id="featureHeading3">
+                        Encrypted Transact Protocol</h4>
+                    <p class="featurePara text-[0.9rem] text-[#555555] leading-relaxed" id="featurePara3">256-bit SSL
+                        secure checkout supporting major crypto assets, Apple Pay, and standard credit cards with zero
+                        friction.</p>
                 </div>
 
             </div>
 
             <hr>
 
-            <div class="feedbackSectionCn" id="feedbackSectionCn">
+            <div class="feedbackSectionCn grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6"
+                id="feedbackSectionCn">
 
-                <div class="feedbackHeaderCn" id="feedbackHeaderCn">
-                    <h4 class="feedbackSubHeading" id="feedbackSubHeading">Community Verified</h4>
-                    <h2 class="feedbackHeading" id="feedbackHeading">Engineer Feedback</h2>
-                    <p class="feedbackPara" id="feedbackPara">Read what senior developers and creators say about
-                        CodeCart products.</p>
+                <div class="feedbackHeaderCn col-span-full text-center mb-6" id="feedbackHeaderCn">
+                    <h4 class="feedbackSubHeading text-[0.8rem] font-semibold uppercase tracking-[1.5px] text-[#555555] mb-2"
+                        id="feedbackSubHeading">Community Verified</h4>
+                    <h2 class="feedbackHeading text-[1.8rem] font-bold text-[#1a1a1a] mb-2" id="feedbackHeading">
+                        Engineer Feedback</h2>
+                    <p class="feedbackPara text-[0.95rem] text-[#555555]" id="feedbackPara">Read what senior developers
+                        and creators say about CodeCart products.</p>
                 </div>
 
                 <!-- Ratings Card 1 -->
-                <div class="ratingsCard ratingsCard1" id="ratingsCard1">
-                    <div class="ratingCardTop" id="ratingCardTop1">
-                        <span class="ratingName" id="ratingName1">Alex Chen</span>
-                        <span class="ratingRole" id="ratingRole1">Senior Full-Stack Developer</span>
+                <div class="ratingsCard bg-white border border-[#e2e5e9] rounded-lg p-6 ratingsCard1" id="ratingsCard1">
+                    <div class="ratingCardTop mb-3" id="ratingCardTop1">
+                        <span class="ratingName block text-base font-semibold text-[#1a1a1a]"
+                            id="ratingName1">Alex Chen</span>
+                        <span class="ratingRole block text-[0.85rem] text-[#555555]" id="ratingRole1">Senior
+                            Full-Stack Developer</span>
                     </div>
-                    <div class="ratingStars" id="ratingStars1" aria-label="5 out of 5 stars">
+                    <div class="ratingStars flex gap-[0.2rem] text-[#f5a623] text-[0.85rem] mb-3" id="ratingStars1"
+                        aria-label="5 out of 5 stars">
                         <i class="fa-solid fa-star" id="ratingStar1a"></i>
                         <i class="fa-solid fa-star" id="ratingStar1b"></i>
                         <i class="fa-solid fa-star" id="ratingStar1c"></i>
                         <i class="fa-solid fa-star" id="ratingStar1d"></i>
                         <i class="fa-solid fa-star" id="ratingStar1e"></i>
                     </div>
-                    <p class="ratingText" id="ratingText1">The e-commerce template saved me weeks of development. Clean
-                        code, well-structured, and easy to customize.</p>
+                    <p class="ratingText text-[0.9rem] text-[#555555] leading-relaxed" id="ratingText1">The e-commerce
+                        template saved me weeks of development. Clean code, well-structured, and easy to customize.</p>
                 </div>
 
                 <!-- Ratings Card 2 -->
-                <div class="ratingsCard ratingsCard2" id="ratingsCard2">
-                    <div class="ratingCardTop" id="ratingCardTop2">
-                        <span class="ratingName" id="ratingName2">Sarah Miller</span>
-                        <span class="ratingRole" id="ratingRole2">UI/UX Designer</span>
+                <div class="ratingsCard bg-white border border-[#e2e5e9] rounded-lg p-6 ratingsCard2" id="ratingsCard2">
+                    <div class="ratingCardTop mb-3" id="ratingCardTop2">
+                        <span class="ratingName block text-base font-semibold text-[#1a1a1a]"
+                            id="ratingName2">Sarah Miller</span>
+                        <span class="ratingRole block text-[0.85rem] text-[#555555]" id="ratingRole2">UI/UX
+                            Designer</span>
                     </div>
-                    <div class="ratingStars" id="ratingStars2" aria-label="5 out of 5 stars">
+                    <div class="ratingStars flex gap-[0.2rem] text-[#f5a623] text-[0.85rem] mb-3" id="ratingStars2"
+                        aria-label="5 out of 5 stars">
                         <i class="fa-solid fa-star" id="ratingStar2a"></i>
                         <i class="fa-solid fa-star" id="ratingStar2b"></i>
                         <i class="fa-solid fa-star" id="ratingStar2c"></i>
                         <i class="fa-solid fa-star" id="ratingStar2d"></i>
                         <i class="fa-solid fa-star" id="ratingStar2e"></i>
                     </div>
-                    <p class="ratingText" id="ratingText2">Beautiful portfolio template with great attention to detail.
-                        The responsive design works flawlessly on all devices.</p>
+                    <p class="ratingText text-[0.9rem] text-[#555555] leading-relaxed" id="ratingText2">Beautiful
+                        portfolio template with great attention to detail. The responsive design works flawlessly on
+                        all devices.</p>
                 </div>
 
                 <!-- Ratings Card 3 -->
-                <div class="ratingsCard ratingsCard3" id="ratingsCard3">
-                    <div class="ratingCardTop" id="ratingCardTop3">
-                        <span class="ratingName" id="ratingName3">David Kumar</span>
-                        <span class="ratingRole" id="ratingRole3">DevOps Engineer</span>
+                <div class="ratingsCard bg-white border border-[#e2e5e9] rounded-lg p-6 ratingsCard3" id="ratingsCard3">
+                    <div class="ratingCardTop mb-3" id="ratingCardTop3">
+                        <span class="ratingName block text-base font-semibold text-[#1a1a1a]"
+                            id="ratingName3">David Kumar</span>
+                        <span class="ratingRole block text-[0.85rem] text-[#555555]" id="ratingRole3">DevOps
+                            Engineer</span>
                     </div>
-                    <div class="ratingStars" id="ratingStars3" aria-label="5 out of 5 stars">
+                    <div class="ratingStars flex gap-[0.2rem] text-[#f5a623] text-[0.85rem] mb-3" id="ratingStars3"
+                        aria-label="5 out of 5 stars">
                         <i class="fa-solid fa-star" id="ratingStar3a"></i>
                         <i class="fa-solid fa-star" id="ratingStar3b"></i>
                         <i class="fa-solid fa-star" id="ratingStar3c"></i>
                         <i class="fa-solid fa-star" id="ratingStar3d"></i>
                         <i class="fa-solid fa-star" id="ratingStar3e"></i>
                     </div>
-                    <p class="ratingText" id="ratingText3">The SaaS template is production-ready. Well-documented
-                        components and a solid architecture. Highly recommended.</p>
+                    <p class="ratingText text-[0.9rem] text-[#555555] leading-relaxed" id="ratingText3">The SaaS template
+                        is production-ready. Well-documented components and a solid architecture. Highly recommended.
+                    </p>
                 </div>
 
             </div>
@@ -223,16 +286,21 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="footerBottomCn" id="footerBottomCn">
+    <footer class="footerBottomCn bg-white border-t border-[#e2e5e9] px-8 py-6 flex items-center justify-between flex-wrap gap-4"
+        id="footerBottomCn">
 
         <div class="copyrightCn" id="copyrightCn">
-            <span class="copyrightText" id="copyrightText">© 2026 CodeCart by Coding Fam. All rights reserved.</span>
+            <span class="copyrightText text-[0.85rem] text-[#555555]" id="copyrightText">© 2026 CodeCart by Coding Fam.
+                All rights reserved.</span>
         </div>
 
-        <div class="footerLegalCn" id="footerLegalCn">
-            <a href="#" class="footerLegalLink" id="privacyPolicyLink">Privacy Policy</a>
-            <a href="#" class="footerLegalLink" id="termsOfServiceLink">Terms of Service</a>
-            <a href="#" class="footerLegalLink" id="cookiePreferencesLink">Cookie Preferences</a>
+        <div class="footerLegalCn flex gap-6 flex-wrap" id="footerLegalCn">
+            <a href="#" class="footerLegalLink text-[0.85rem] text-[#555555] hover:text-[#1a1a1a]"
+                id="privacyPolicyLink">Privacy Policy</a>
+            <a href="#" class="footerLegalLink text-[0.85rem] text-[#555555] hover:text-[#1a1a1a]"
+                id="termsOfServiceLink">Terms of Service</a>
+            <a href="#" class="footerLegalLink text-[0.85rem] text-[#555555] hover:text-[#1a1a1a]"
+                id="cookiePreferencesLink">Cookie Preferences</a>
         </div>
 
     </footer>

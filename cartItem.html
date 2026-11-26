@@ -4,49 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Item - CodeCart</title>
+    <!-- Tailwind build output (same as before) -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Original custom stylesheet kept (your CSS unchanged & still used) -->
     <link rel="stylesheet" href="cartItem.css">
 </head>
-<body>
+<body class="font-[system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif] bg-[#f8f9fa] text-[#1a1a1a] min-h-screen flex justify-center items-center p-5 antialiased">
 
-    <main class="order-container" id="orderContainer">
-        <article class="product-card" id="productCard">
-            <header class="card-header" id="cardHeader">
-                <h3 class="order-title" id="orderTitle">Order By <span class="user-name" id="userName"></span></h3>
-                <span class="badge" id="badge">New Order</span>
+    <main class="order-container w-full max-w-[440px] flex flex-col gap-4" id="orderContainer">
+        <article class="product-card bg-white border border-[#e2e5e9] rounded-lg p-6 shadow-[0_4px_15px_rgba(0,0,0,0.03)]"
+            id="productCard">
+            <header class="card-header flex justify-between items-center mb-5 pb-3 border-b border-[#e2e5e9]"
+                id="cardHeader">
+                <h3 class="order-title text-[1.1rem] font-semibold text-[#1a1a1a]" id="orderTitle">Order By <span
+                        class="user-name" id="userName"></span></h3>
+                <span
+                    class="badge bg-[#1a1a1a] text-white text-[0.75rem] font-semibold px-[10px] py-1 rounded-[20px] uppercase tracking-[0.5px]"
+                    id="badge">New Order</span>
             </header>
 
-            <div class="card-body" id="cardBody">
-                <div class="info-group" id="infoGroupEmail">
-                    <span class="label" id="labelEmail">Email</span>
-                    <span class="value order-email" id="orderEmail">xyz@example.com</span>
-                </div>
-                
-                <div class="info-group" id="infoGroupPhone">
-                    <span class="label" id="labelPhone">Phone No</span>
-                    <span class="value user-phone" id="userPhone">+92 300 1234567</span>
+            <div class="card-body flex flex-col gap-[14px] mb-5" id="cardBody">
+                <div class="info-group flex justify-between items-center text-[0.95rem]" id="infoGroupEmail">
+                    <span class="label text-[#555555] font-medium" id="labelEmail">Email</span>
+                    <span class="value order-email text-[#1a1a1a] font-medium"
+                        id="orderEmail">xyz@example.com</span>
                 </div>
 
-                <div class="product-details" id="productDetails">
-                    <h4 class="product-name" id="productName"><span class="product-title-span" id="productTitleSpan"></span></h4>
-                    <p class="product-desc" id="productDesc"><span class="product-disc" id="productDisc"></span></p>
+                <div class="info-group flex justify-between items-center text-[0.95rem]" id="infoGroupPhone">
+                    <span class="label text-[#555555] font-medium" id="labelPhone">Phone No</span>
+                    <span class="value user-phone text-[#1a1a1a] font-medium" id="userPhone">+92 300 1234567</span>
+                </div>
+
+                <div class="product-details bg-[#f8f9fa] border border-[#e2e5e9] rounded-md p-[14px] mt-[6px]"
+                    id="productDetails">
+                    <h4 class="product-name text-[1.05rem] font-semibold text-[#1a1a1a] mb-1" id="productName"><span
+                            class="product-title-span" id="productTitleSpan"></span></h4>
+                    <p class="product-desc text-[0.875rem] text-[#555555] leading-[1.4]" id="productDesc"><span
+                            class="product-disc" id="productDisc"></span></p>
                 </div>
             </div>
 
-            <footer class="card-footer" id="cardFooter">
-                <div class="price-box" id="priceBox">
-                    <span class="price-label" id="priceLabel">Total Price</span>
-                    <span class="price-value product-price" id="productPrice"></span>
+            <footer class="card-footer flex justify-between items-center pt-[14px] border-t border-[#e2e5e9]"
+                id="cardFooter">
+                <div class="price-box flex flex-col" id="priceBox">
+                    <span class="price-label text-[0.75rem] text-[#555555] uppercase tracking-[0.5px]"
+                        id="priceLabel">Total Price</span>
+                    <span class="price-value product-price text-[1.2rem] font-bold text-[#1a1a1a]"
+                        id="productPrice"></span>
                 </div>
-                <div class="status-box" id="statusBox">
-                    <span class="status-label" id="statusLabel">Status :</span>
+                <div class="status-box text-[0.9rem] text-[#1a1a1a]" id="statusBox">
+                    <span class="status-label text-[#555555]" id="statusLabel">Status :</span>
                     <span class="status-value" id="statusValue"></span>
                 </div>
             </footer>
         </article>
 
-        <div class="card-actions" id="cardActions">
-            <button type="button" class="btn btn-add" id="btnAdd">Add</button>
-            <button type="button" class="btn btn-remove" id="btnRemove">Remove</button>
+        <div class="card-actions flex gap-3" id="cardActions">
+            <button type="button"
+                class="btn btn-add flex-1 p-3 border-none rounded-md text-[0.95rem] font-semibold cursor-pointer font-[inherit] bg-[#1a1a1a] text-white hover:bg-black"
+                id="btnAdd">Add</button>
+            <button type="button"
+                class="btn btn-remove flex-1 p-3 rounded-md text-[0.95rem] font-semibold cursor-pointer font-[inherit] bg-[#f8f9fa] text-[#1a1a1a] border border-[#e2e5e9] hover:bg-[#f1f3f5] hover:border-[#b0b5bc]"
+                id="btnRemove">Remove</button>
         </div>
     </main>
 

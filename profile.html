@@ -4,41 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Code Cart</title>
+    <!-- Tailwind build output (same as before) -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Original custom stylesheet kept (your CSS unchanged & still used) -->
     <link rel="stylesheet" href="profile.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-['Poppins',sans-serif] bg-[#f8f9fa] text-[#1a1a1a] flex justify-center items-center min-h-screen antialiased">
 
     <!-- Main Container for Login -->
-    <div class="auth-container" id="authContainer">
-        
+    <div class="auth-container w-full max-w-[400px] p-5" id="authContainer">
+
         <!-- Login Form Box -->
-        <div class="auth-box" id="login-box">
-            <h2 id="loginTitle">Welcome Back</h2>
-            <p class="subtitle" id="loginSubtitle">Login to your account</p>
+        <div class="auth-box bg-white py-10 px-[30px] rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.03)] border border-[#e2e5e9]"
+            id="login-box">
+            <h2 class="text-2xl text-[#1a1a1a] mb-[5px] text-center" id="loginTitle">Welcome Back</h2>
+            <p class="subtitle text-sm text-[#555555] text-center mb-[25px]" id="loginSubtitle">Login to your account</p>
 
             <form action="#" id="loginForm">
-                <div class="input-group" id="inputGroupEmail">
-                    <label for="login-email" id="labelLoginEmail">Email Address Or Number</label>
-                    <input type="email" id="login-email" placeholder="Login Email Or Number">
+                <div class="input-group mb-5" id="inputGroupEmail">
+                    <label for="login-email"
+                        class="block text-sm text-[#1a1a1a] mb-[6px] font-medium" id="labelLoginEmail">Email Address Or
+                        Number</label>
+                    <input type="email" id="login-email" placeholder="Login Email Or Number"
+                        class="w-full px-[15px] py-3 border border-[#e2e5e9] rounded-md text-sm font-['Poppins',sans-serif] bg-[#f8f9fa] text-[#1a1a1a] outline-none focus:border-[#1a1a1a]">
                 </div>
 
-                <div class="input-group" id="inputGroupPassword">
-                    <label for="login-password" id="labelLoginPassword">Password</label>
-                    <input type="password" id="login-password" placeholder="Enter your password">
+                <div class="input-group mb-5" id="inputGroupPassword">
+                    <label for="login-password"
+                        class="block text-sm text-[#1a1a1a] mb-[6px] font-medium"
+                        id="labelLoginPassword">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password"
+                        class="w-full px-[15px] py-3 border border-[#e2e5e9] rounded-md text-sm font-['Poppins',sans-serif] bg-[#f8f9fa] text-[#1a1a1a] outline-none focus:border-[#1a1a1a]">
                 </div>
 
-                <button type="submit" class="btn-primary" id="loginBtn">Login</button>
+                <button type="submit"
+                    class="btn-primary w-full py-3 bg-[#1a1a1a] text-white border-none rounded-md text-base font-medium cursor-pointer font-['Poppins',sans-serif] hover:bg-black"
+                    id="loginBtn">Login</button>
             </form>
 
-            <p class="switch-text" id="switchText">
-                Don't have an account? 
-                <a href="#" id="show-signup">Create Account</a>
+            <p class="switch-text text-center mt-5 text-sm text-[#555555]" id="switchText">
+                Don't have an account?
+                <a href="#" class="text-[#1a1a1a] no-underline font-semibold hover:underline"
+                    id="show-signup">Create Account</a>
             </p>
         </div>
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="profile.js"></script>
 </body>
 </html>
