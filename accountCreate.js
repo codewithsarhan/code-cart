@@ -14,15 +14,15 @@ let signupForm = document.querySelector('#signupForm');
 
 signupBtn.addEventListener('click', (e) => {
 
-    let userFulName = signupName.value;
-    let userEmailNo = signupEmail.value;
+    let userFulName = signupName.value.trim();
+    let userEmailNo = signupEmail.value.trim();
     let userPasswrd = signupPassword.value;
     let confirmPassword = signupConfirmPassword.value;
 
 
     e.preventDefault();
 
-    if (userFulName === "" || userEmailNo === "" || userPasswrd === "" || confirmPassword === "") {
+    if (!userFulName.trim() || !userEmailNo.trim() || !userPasswrd || !confirmPassword) {
 
         alert("Complete All Requirements To Creating Account");
 

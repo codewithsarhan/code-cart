@@ -1,62 +1,79 @@
 // Profile Open ===
 
-let userIcn = document.querySelector('#userIcn');
+const userIcn = document.querySelector('#userIcn');
+const cartIcn = document.querySelector('#cartIcn');
+const productMainCn = document.querySelector('#productMainCn');
+const reddot = document.querySelector('.red-dot');
+const searchInput = document.querySelector('#searchInpt');
+const searchIcon = document.querySelector('#searchIcn');
 
-let login = false;
+userIcn?.addEventListener('click', () => {
+    window.location.href = 'profile.html';
+});
 
-userIcn.addEventListener('click', () => {
+cartIcn?.addEventListener('click', () => {
+    window.location.href = 'cartItem.html';
+});
 
-    if (login === false) {
-
-
-        window.location.href = 'profile.html'
-
-
+productMainCn?.addEventListener('click', (event) => {
+    if (event.target.closest('.orderBtn')) {
+        window.location.href = 'orderForm.html';
     }
+});
 
-})
-
-let cartIcn = document.querySelector('#cartIcn');
-
-cartIcn.addEventListener('click', () => {
-
-    window.location.href = 'cartItem.html'
-
-})
-
-
-let productMainCn = document.querySelector('#productMainCn')
-
-productMainCn.addEventListener('click', (e) => {
-
-
-    if (e.target.tagName === 'BUTTON') {
-
-        window.location.href = 'orderForm.html'
-
-    }
-
-
-})
-
-
-
-
-let cartItem = localStorage.getItem('cartItem');
-
-console.log(cartItem);
-
-
-let reddot = document.querySelector('.red-dot');
-
-reddot.style.display = 'none'
-
-function reddotFunc(cartValue) {
-
-    if (cartValue === "true") {
-
-reddot.style.display = 'block'        
-
-    } 
+function updateCartIndicator(cartValue) {
+    if (!reddot) return;
+    reddot.classList.toggle('hidden', cartValue !== 'true');
 }
-reddotFunc(cartItem)
+
+updateCartIndicator(localStorage.getItem('cartItem'));
+
+function filterProducts() {
+    const query = searchInput?.value.trim().toLowerCase();
+    if (!query || !productMainCn) {
+        productMainCn?.querySelectorAll('.productCard').forEach((card) => {
+            card.classList.remove('hidden');
+        });
+        return;
+    }
+
+    productMainCn.querySelectorAll('.productCard').forEach((card) => {
+        const name = card.querySelector('.productName')?.textContent.toLowerCase() ?? '';
+        card.classList.toggle('hidden', !name.includes(query));
+    });
+}
+
+searchInput?.addEventListener('input', filterProducts);
+searchIcon?.addEventListener('click', filterProducts);
+searchIcon?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        filterProducts();
+    }
+});
+
+const contactForm = document.querySelector('#contactForm');
+
+contactForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector('#contactName')?.value.trim();
+    const email = document.querySelector('#contactEmail')?.value.trim();
+    const requirements = document.querySelector('#contactRequirements')?.value.trim();
+
+    if (!name || !email || !requirements) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Incomplete form',
+            text: 'Please fill in all contact details.'
+        });
+        return;
+    }
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Message ready',
+        text: 'Thank you. Your project details have been recorded.'
+    });
+    contactForm.reset();
+});

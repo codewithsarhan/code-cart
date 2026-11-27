@@ -1,9 +1,9 @@
-let coustumerName = localStorage.getItem("userName");
-let userEmail = localStorage.getItem("userEmail");
-let userPhoneNo = localStorage.getItem("userPhoneNo");
-let productPrice = localStorage.getItem("productPrice");
-let productName = localStorage.getItem("productName");
-let productDisc = localStorage.getItem("productDisc");
+let coustumerName = localStorage.getItem("userName") || "";
+let userEmail = localStorage.getItem("userEmail") || "";
+let userPhoneNo = localStorage.getItem("userPhoneNo") || "";
+let productPrice = localStorage.getItem("productPrice") || "";
+let productName = localStorage.getItem("productName") || "";
+let productDisc = localStorage.getItem("productDisc") || "";
 
 let username = document.querySelector('.user-name');
 let orderemail = document.querySelector('.order-email');
@@ -24,7 +24,7 @@ producttitle.textContent = productName;
 console.log();
 
 
-if (productDisc == undefined) {
+if (!productDisc) {
     
     statusValue.textContent = "buyfirst"
     statusValue.style.color = "red"
@@ -41,7 +41,9 @@ let btnremove = document.querySelector('.btn-remove');
 
 btnremove.addEventListener('click' , () => {
 
-localStorage.clear()
+["userName", "userEmail", "userPhoneNo", "productPrice", "productName", "productDisc", "cartItem"].forEach((key) => {
+    localStorage.removeItem(key);
+});
 location.reload()
 
 })

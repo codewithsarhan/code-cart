@@ -2,29 +2,25 @@ let fullNameInput = document.querySelector('#fullName');
 let emailInput = document.querySelector('#email');
 let phoneInput = document.querySelector('#phone');
 
-let cardContent = document.querySelectorAll('.card-content');
 let servicesGrid = document.querySelector('.services-grid')
-let productPrice = document.querySelectorAll('.price');
 let totalPrice = document.querySelector('#totalPrice')
 
 let prPrice;
 let prName;
 let prDisc;
 
+if (totalPrice) totalPrice.textContent = 'Not selected';
+
 servicesGrid.addEventListener('click', (e) => {
 
     if (e.target.closest('.card-content')) {
 
         let crd = e.target.closest('.card-content')
-        console.log(crd);
+        const radio = crd.closest('.service-card')?.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
         prPrice = crd.querySelector('.price').textContent;
         prName = crd.querySelector('h3').textContent;
         prDisc = crd.querySelector('.desc').textContent;
-        console.log(prName);
-        console.log(prDisc);
-        console.log(prPrice);
-
-
         totalPrice.textContent = prPrice;
 
 
@@ -50,7 +46,7 @@ submitBtn.addEventListener('click', (e) => {
     let productDisc = prDisc;
 
 
-    if (userName == '' && userEmail == '' && userPhoneNo == '') {
+    if (!userName.trim() || !userEmail.trim() || !userPhoneNo.trim()) {
 
         Swal.fire({
             icon: "error",

@@ -7,8 +7,6 @@
     <title>Code Cart</title>
     <!-- Tailwind (kept as build output, same as before) -->
     <link rel="stylesheet" href="./dist/output.css">
-    <!-- Original custom stylesheet kept (your CSS is unchanged & still used) -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -32,7 +30,7 @@
                     id="navLinksShop">Shop</a>
                 <a href="#feedbackSectionCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
                     id="navLinksAbout">About</a>
-                <a href="#footerBottomCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
+                <a href="#contactSectionCn" class="navLinks text-[0.95rem] text-[#555555] hover:text-[#1a1a1a]"
                     id="navLinksContact">Contact</a>
             </div>
 
@@ -199,6 +197,44 @@
                         friction.</p>
                 </div>
 
+            </div>
+
+            <!-- Contact Section - Added as requested -->
+            <div class="contactSectionCn max-w-[1200px] mx-auto px-8 py-16" id="contactSectionCn">
+                <h4 class="contactHeading text-[1.8rem] font-bold text-[#1a1a1a] text-center mb-4" id="contactHeading">
+                    Get In Touch</h4>
+                <p class="contactPara text-[0.95rem] text-[#555555] text-center mb-10" id="contactPara">
+                    Have a project in mind or need a custom website? Fill out the form below and I'll get back to you.</p>
+
+                <form class="contactForm max-w-[600px] mx-auto bg-white border border-[#e2e5e9] rounded-lg p-8" id="contactForm">
+                    <div class="formGroup mb-6" id="nameGroup">
+                        <label for="contactName" class="block text-[0.9rem] font-medium text-[#1a1a1a] mb-2"
+                            id="nameLabel">Your Name</label>
+                        <input type="text" id="contactName" name="name" required
+                            class="w-full border border-[#e2e5e9] bg-[#f8f9fa] text-[#1a1a1a] rounded-md px-4 py-3 focus:outline-none focus:border-[#1a1a1a]"
+                            placeholder="Enter your name">
+                    </div>
+
+                    <div class="formGroup mb-6" id="emailGroup">
+                        <label for="contactEmail" class="block text-[0.9rem] font-medium text-[#1a1a1a] mb-2"
+                            id="emailLabel">Your Email</label>
+                        <input type="email" id="contactEmail" name="email" required
+                            class="w-full border border-[#e2e5e9] bg-[#f8f9fa] text-[#1a1a1a] rounded-md px-4 py-3 focus:outline-none focus:border-[#1a1a1a]"
+                            placeholder="Enter your email">
+                    </div>
+
+                    <div class="formGroup mb-6" id="requirementsGroup">
+                        <label for="contactRequirements" class="block text-[0.9rem] font-medium text-[#1a1a1a] mb-2"
+                            id="requirementsLabel">Project Requirements</label>
+                        <textarea id="contactRequirements" name="requirements" rows="5"
+                            class="w-full border border-[#e2e5e9] bg-[#f8f9fa] text-[#1a1a1a] rounded-md px-4 py-3 focus:outline-none focus:border-[#1a1a1a] resize-y"
+                            placeholder="Describe your project, what kind of website you need, your budget, timeline, etc."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="contactSubmitBtn w-full bg-[#1a1a1a] text-white text-[0.95rem] font-medium px-8 py-3 rounded-md hover:bg-black"
+                        id="contactSubmitBtn">Send Message</button>
+                </form>
             </div>
 
             <hr>
