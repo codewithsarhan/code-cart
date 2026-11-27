@@ -499,12 +499,6 @@
   .bg-indigo-500 {
     background-color: var(--color-indigo-500);
   }
-  .bg-indigo-500\/50 {
-    background-color: color-mix(in srgb, oklch(58.5% 0.233 277.117) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-indigo-500) 50%, transparent);
-    }
-  }
   .bg-indigo-600 {
     background-color: var(--color-indigo-600);
   }
@@ -513,12 +507,6 @@
   }
   .bg-slate-900 {
     background-color: var(--color-slate-900);
-  }
-  .bg-slate-900\/70 {
-    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-900) 70%, transparent);
-    }
   }
   .bg-white {
     background-color: var(--color-white);
@@ -582,9 +570,6 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-  }
-  .py-2\.5 {
-    padding-block: calc(var(--spacing) * 2.5);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -795,9 +780,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  .placeholder-slate-400::placeholder {
-    color: var(--color-slate-400);
-  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -840,9 +822,6 @@
     .hover\:bg-black:hover {
       background-color: var(--color-black);
     }
-    .hover\:bg-indigo-500:hover {
-      background-color: var(--color-indigo-500);
-    }
     .hover\:text-\[\#1a1a1a\]:hover {
       color: #1a1a1a;
     }
@@ -856,43 +835,9 @@
   .focus\:border-\[\#1a1a1a\]:focus {
     border-color: #1a1a1a;
   }
-  .focus\:border-indigo-500:focus {
-    border-color: var(--color-indigo-500);
-  }
-  .focus\:ring-1:focus {
-    --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .focus\:ring-indigo-500:focus {
-    --tw-ring-color: var(--color-indigo-500);
-  }
   .focus\:outline-none:focus {
     --tw-outline-style: none;
     outline-style: none;
-  }
-  .active\:bg-indigo-700:active {
-    background-color: var(--color-indigo-700);
-  }
-  @media (width >= 40rem) {
-    .sm\:px-6 {
-      padding-inline: calc(var(--spacing) * 6);
-    }
-  }
-  @media (width >= 48rem) {
-    .md\:col-span-2 {
-      grid-column: span 2 / span 2;
-    }
-    .md\:col-span-3 {
-      grid-column: span 3 / span 3;
-    }
-    .md\:grid-cols-5 {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-  }
-  @media (width >= 64rem) {
-    .lg\:px-8 {
-      padding-inline: calc(var(--spacing) * 8);
-    }
   }
   .service-card input:checked + .\[\.service-card_input\:checked\+\&\]\:border-\[\#1a1a1a\] {
     border-color: #1a1a1a;

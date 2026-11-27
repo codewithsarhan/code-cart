@@ -6,11 +6,14 @@ let dta = localStorage.getItem('userLoginDetails')
 let parsed = dta ? JSON.parse(dta) : [];
 console.log(parsed);
 
+if (parsed.length > 0) {
+    
+    
 if (parsed[0].loggedIn == true) {
 
     let loginbox = document.querySelector('#login-box');
 
-    loginbox.style.display = 'none';
+    loginbox.classList.add = 'hidden';
 
     console.log("Hsh");
 
@@ -48,11 +51,9 @@ if (parsed[0].loggedIn == true) {
 }
 
 
+}else{
 
-let showSignup = document.querySelector('#show-signup');
+    console.log("Check First Not Account Found");
+    
 
-showSignup.addEventListener('click', () => {
-
-    window.location.href = "accountCreate.html"
-
-})
+}
